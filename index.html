@@ -8,6 +8,7 @@
   <link href="css/bootstrap.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="css/responsive.css" rel="stylesheet">
+  <link href="css/markdown-modal.css" rel="stylesheet">
   <!--Favicon-->
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -455,13 +456,12 @@
               <!-- card item -->
               <div class="card-projects card-item" id="work" >
                 <div class="card-inner">
-                  <h4 class="title">项目介绍</h4>
+                  <h4 class="title">项目介绍(点击标题可查看详细)</h4>
                   <div class="row">
                     <div class="services-block col-md-12">
                       <div class="inner-box">
                         <div class="icon-box"><span class="icon flaticon-pen-tool"></span></div>
-                        <h4><a href="https://github.com/sunniejs/sol-weapp">Sol Weapp <img
-                              src="https://img.shields.io/github/stars/sunniejs/sol-weapp.svg?style=social" /></a>
+                        <h4><a href="javascript:void(0)" onclick="loadMarkdown('./resource/cs.md', 'Sol Weapp')">Sol Weapp </a>
                         </h4>
                         <div class="text">微信小程序,商城营销组件库。红包雨、大转盘、九宫格翻牌等营销组件，导航栏、筛选页、高度业务化组件。
                         </div>
@@ -470,20 +470,24 @@
                     <div class="services-block col-md-12">
                       <div class="inner-box">
                         <div class="icon-box"><span class="icon flaticon-folder"></span></div>
-                        <h4><a href="https://github.com/sunniejs/vue_canvas_poster">Vue Canvas Poster <img
+                        <h4><a href="javascript:void(0)" onclick="loadMarkdown('./resource/project-example.md', 'Vue Canvas Poster')">Vue Canvas Poster <img
                               src="https://img.shields.io/github/stars/sunniejs/vue_canvas_poster.svg?style=social" /></a>
                         </h4>
                         <div class="text">一个通过 css 属性画 canvas 图片的轻量级的 vue 组件 (A lightweight vue components use canvas
-                          draw image by css properties.)</div>
+                          draw image by css properties.)
+                          <a href="javascript:void(0)" onclick="loadMarkdown('./resource/project-example.md', 'Vue Canvas Poster')" class="theme-btn btn-style-two">查看详情</a>
+                        </div>
                       </div>
                     </div>
                     <div class="services-block col-md-12">
                       <div class="inner-box">
                         <div class="icon-box"><span class="icon flaticon-computer"></span></div>
-                        <h4><a href="https://github.com/sunniejs/vue-wechat-auth">Vue Wechat Auth <img
+                        <h4><a href="javascript:void(0)" onclick="loadMarkdown('./resource/project-example.md', 'Vue Wechat Auth')">Vue Wechat Auth <img
                               src="https://img.shields.io/github/stars/sunniejs/vue-wechat-auth.svg?style=social" /></a>
                         </h4>
-                        <div class="text">vue微信网页授权解决方案</div>
+                        <div class="text">vue微信网页授权解决方案
+                          <a href="javascript:void(0)" onclick="loadMarkdown('./resource/project-example.md', 'Vue Wechat Auth')" class="theme-btn btn-style-two">查看详情</a>
+                        </div>
                       </div>
                     </div>
 
@@ -603,6 +607,8 @@
   <script src="js/jquery-type.js"></script>
   <script src="js/jquery.nicescroll.min.js"></script>
   <script src="js/particle-alone.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.min.js"></script>
+  <script src="js/markdown-loader.js"></script>
   <script src="js/script.js"></script>
 </body>
 

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markdown加载测试</title>
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .test-container {
+      margin: 20px 0;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 8px 16px;
+      margin: 5px;
+      background-color: #007bff;
+      color: white;
+      border-radius: 4px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    h1 {
+      color: #333;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Markdown加载测试</h1>
+  
+  <div class="test-container">
+    <h2>测试不同的路径格式</h2>
+    <p>点击下面的按钮测试不同格式的路径：</p>
+    
+    <button class="btn" onclick="loadMarkdown('./resource/sol-weapp.md', 'Sol Weapp (相对路径 ./)')">
+      加载 ./resource/sol-weapp.md
+    </button>
+    
+    <button class="btn" onclick="loadMarkdown('resource/sol-weapp.md', 'Sol Weapp (相对路径无 ./)')">
+      加载 resource/sol-weapp.md
+    </button>
+    
+    <button class="btn" onclick="loadMarkdown('./resource/project-example.md', 'Project Example')">
+      加载 ./resource/project-example.md
+    </button>
+    
+    <button class="btn" onclick="loadMarkdown('./resource/不存在的文件.md', '不存在的文件')">
+      加载不存在的文件
+    </button>
+  </div>
+  
+  <div class="test-container">
+    <h2>调试信息</h2>
+    <p>请打开浏览器控制台查看加载过程中的日志信息。</p>
+    <button class="btn" onclick="window.location.href='index.html'">
+      返回主页
+    </button>
+  </div>
+
+  <!-- 引入必要的脚本 -->
+  <script src="js/jquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.min.js"></script>
+  <script src="js/markdown-loader.js"></script>
+</body>
+</html>
